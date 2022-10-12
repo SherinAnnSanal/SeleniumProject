@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AssignentTestSuite">
+<test name="BrowserTest">
+<parameter name="Browser" value="chrome"/>
+<parameter name="UserName" value="carol"/>
+<parameter name="Password" value="1q2w3e4r"/>
+
+<classes>
+<class name="assignment.Assignment6" />
+</classes>
+
+</test>
+
+</suite>

@@ -27,6 +27,7 @@ public class DropDown {
 		System.out.println(firstElementValue);
 		s.selectByValue("Red");
 		s.selectByIndex(2);
+	
 
 		// Multiselect
 		WebElement multiSelect = driver.findElement(By.id("multi-select-field"));

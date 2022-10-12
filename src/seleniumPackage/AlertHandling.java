@@ -12,14 +12,14 @@ public class AlertHandling {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://selenium.obsqurazone.com/javascript-alert.php\r\n");
 		driver.manage().window().maximize();
-		/*
-		 * WebElement clickme_btn =
-		 * driver.findElement(By.xpath("//button[@class='btn btn-success']"));
-		 * clickme_btn.click(); String text = driver.switchTo().alert().getText();
-		 * driver.switchTo().alert().accept();//accepting alert box
-		 * //driver.switchTo().alert().dismiss(); //dismissing alert box
-		 * System.out.println("The text inside the pop up is: " + text);
-		 */
+		
+		  WebElement clickme_btn =
+		  driver.findElement(By.xpath("//button[@class='btn btn-success']"));
+		  clickme_btn.click(); String text = driver.switchTo().alert().getText();
+		  driver.switchTo().alert().accept();//accepting alert box
+		  //driver.switchTo().alert().dismiss(); //dismissing alert box
+		  System.out.println("The text inside the pop up is: " + text);
+		 
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,300)");
 		  WebElement click_prompt_box=driver.findElement(By.xpath("//button[@class='btn btn-danger']"));

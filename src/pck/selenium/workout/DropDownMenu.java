@@ -22,6 +22,8 @@ public class DropDownMenu {
 			
 			//declare Select object for selecting and fetching element selected.
 			Select s=new Select(dropDownMenuObject);
+			
+			
 			//selecting drop down by value, index, visible text
 			s.selectByValue("Red");
 			//Display selected option 
@@ -39,12 +41,14 @@ public class DropDownMenu {
 			WebElement multiList=driver.findElement(By.xpath("//select[@id='multi-select-field']"));
 			Select sOb=new Select(multiList);
 			List<WebElement> li=s.getAllSelectedOptions();
-			sOb.selectByVisibleText("Yellow");
-			sOb.selectByVisibleText("Red");
-			
-			for(int i=0;i<li.size();i++)
+			/*
+			 * sOb.selectByVisibleText("Yellow"); sOb.selectByVisibleText("Red");
+			 */
+			List<WebElement> options = s.getOptions();
+
+			for(int i=0;i<options.size();i++)
 			{
-				System.out.println(li.get(i).getText());
+				System.out.println(options.get(i).getText());
 			}
 			
 			

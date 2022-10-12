@@ -13,13 +13,13 @@ public class DragAndDrop {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://demo.guru99.com/test/drag_drop.html");
 		driver.manage().window().maximize();
-		//WebElement source=driver.findElement(By.xpath("//li[@data-id='5']//a[@class='button button-orange']"));
-//WebElement target=driver.findElement(By.x);
+		WebElement source=driver.findElement(By.xpath("//li[@data-id='5']//a[@class='button button-orange']"));
+WebElement target=driver.findElement(By.xpath("//ol[@id='bank']//li[@class='placeholder']"));
 Actions a=new Actions(driver);
-//a.dragAndDrop(source, target).perform();
-WebElement source=driver.findElement(By.xpath("//li[@data-id='6']//a[@class='button button-orange']"));
-WebElement target=driver.findElement(By.xpath("//ol[@id='loan']//li[@class='placeholder']"));
 a.dragAndDrop(source, target).perform();
+WebElement source1=driver.findElement(By.xpath("//li[@data-id='6']//a[@class='button button-orange']"));
+WebElement target1=driver.findElement(By.xpath("//ol[@id='loan']//li[@class='placeholder']"));
+a.dragAndDrop(source1, target1).perform();
 	}
 
 }

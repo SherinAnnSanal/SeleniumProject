@@ -23,6 +23,7 @@ public class FileUpload {
 		WebElement upload=driver.findElement(By.id("uploadfile_0"));
 		Actions ac=new Actions(driver);
 		ac.moveToElement(upload).click().perform();
+		//upload.click();
 
 		StringSelection ss = new StringSelection("C:\\Users\\sanal\\Desktop\\image.jpg");
 	     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
